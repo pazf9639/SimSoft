@@ -32,24 +32,24 @@ namespace SimSoft.BML
             parametros.Add("@descuento", descuento);
            
 
-            return dataAccess.Execute("stp_clientes_Add", parametros);
+            return dataAccess.Execute("stp_Clientes_Add", parametros);
 
         }
         public int Delete()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@idCliente", idCliente);
-            return dataAccess.Execute("stp_clientes_delete", parametros);
+            return dataAccess.Execute("stp_Clientes_delete", parametros);
         }
         public List<Cliente> GetAll()
         {
-            return dataAccess.Query<Cliente>("stp_clientes_getall");
+            return dataAccess.Query<Cliente>("stp_Clientes_getall");
         }
         public Cliente GetById()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@idCliente", idCliente);
-            return dataAccess.QuerySingle<Cliente>("stp_cliente_getbyid", parametros);
+            return dataAccess.QuerySingle<Cliente>("stp_Clientes_getbyid", parametros);
 
         }
         public int Update()
@@ -60,8 +60,7 @@ namespace SimSoft.BML
             parametros.Add("@razonSocial", razonSocial);
             parametros.Add("@telefono", telefono);
             parametros.Add("@descuento", descuento);
-            parametros.Add("@activo", activo);
-            return dataAccess.Execute("stp_cliente_update", parametros);
+            return dataAccess.Execute("stp_Clientes_update", parametros);
 
         }
 

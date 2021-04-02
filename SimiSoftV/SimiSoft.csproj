@@ -62,6 +62,12 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNMCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNMCliente.Designer.cs">
+      <DependentUpon>frmNMCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNMProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNMCliente.resx">
+      <DependentUpon>frmNMCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNMProducto.resx">
       <DependentUpon>frmNMProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +141,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\SimSoft.BML.Cliente.datasource" />
     <None Include="Properties\DataSources\SimSoft.BML.Producto.datasource" />
     <None Include="Properties\DataSources\SimSoft.BML.Proveedor.datasource" />
     <None Include="Properties\Settings.settings">

@@ -39,6 +39,7 @@ namespace SimiSoftV
             this.bbiNuevo = new DevExpress.XtraBars.BarButtonItem();
             this.bbiModificar = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEliminar = new DevExpress.XtraBars.BarButtonItem();
+            this.sbsApariencia = new DevExpress.XtraBars.SkinBarSubItem();
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -50,7 +51,6 @@ namespace SimiSoftV
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltelefono = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
@@ -95,7 +95,7 @@ namespace SimiSoftV
             this.bbiNuevo,
             this.bbiModificar,
             this.bbiEliminar,
-            this.skinBarSubItem1});
+            this.sbsApariencia});
             this.barManager.MainMenu = this.bar2;
             this.barManager.MaxItemId = 5;
             // 
@@ -110,7 +110,7 @@ namespace SimiSoftV
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiNuevo),
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiModificar),
             new DevExpress.XtraBars.LinkPersistInfo(this.bbiEliminar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.sbsApariencia)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Menú principal";
@@ -142,6 +142,12 @@ namespace SimiSoftV
             this.bbiEliminar.Id = 3;
             this.bbiEliminar.Name = "bbiEliminar";
             this.bbiEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiEliminar_ItemClick);
+            // 
+            // sbsApariencia
+            // 
+            this.sbsApariencia.Caption = "Apariencia";
+            this.sbsApariencia.Id = 4;
+            this.sbsApariencia.Name = "sbsApariencia";
             // 
             // barDockControl3
             // 
@@ -202,6 +208,7 @@ namespace SimiSoftV
             this.gvProveedor.GridControl = this.gcProveedor;
             this.gvProveedor.Name = "gvProveedor";
             this.gvProveedor.OptionsBehavior.Editable = false;
+            this.gvProveedor.OptionsView.ColumnAutoWidth = false;
             this.gvProveedor.OptionsView.EnableAppearanceEvenRow = true;
             this.gvProveedor.OptionsView.ShowAutoFilterRow = true;
             this.gvProveedor.OptionsView.ShowGroupPanel = false;
@@ -235,12 +242,6 @@ namespace SimiSoftV
             this.colactivo.Caption = "Activo";
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
-            // 
-            // skinBarSubItem1
-            // 
-            this.skinBarSubItem1.Caption = "Apariencia";
-            this.skinBarSubItem1.Id = 4;
-            this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
             // frmProveedores
             // 
@@ -291,6 +292,6 @@ namespace SimiSoftV
         private DevExpress.XtraGrid.Columns.GridColumn colnombre;
         private DevExpress.XtraGrid.Columns.GridColumn coltelefono;
         private DevExpress.XtraGrid.Columns.GridColumn colactivo;
-        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
+        private DevExpress.XtraBars.SkinBarSubItem sbsApariencia;
     }
 }

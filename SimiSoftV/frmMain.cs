@@ -55,5 +55,21 @@ namespace SimiSoftV
             new frmProveedores() { MdiParent = this }.Show();
             SplashScreenManager.CloseDefaultWaitForm();
         }
+
+        private void bbiClientes_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmClientes))
+                {
+                    form.Activate();
+                    return;
+                }
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "cargando tabla de clientes ...");
+            new frmClientes() { MdiParent = this }.Show();
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
     }
 }

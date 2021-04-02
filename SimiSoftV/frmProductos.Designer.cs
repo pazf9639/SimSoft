@@ -96,6 +96,7 @@ namespace SimiSoftV
             this.btnActualizar.Caption = "Actualizar";
             this.btnActualizar.Id = 0;
             this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizar_ItemClick);
             // 
             // btnNuevo
             // 
