@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimSoft.BML
 {
-    class Proveedor
+   public class Proveedor
     {
         private DataAccess dataAccess = DataAccess.Instance();
         public int idProveedor { get; set; }
@@ -34,7 +34,7 @@ namespace SimSoft.BML
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@ idProveedor", idProveedor);
+            parametros.Add("@idProveedor", idProveedor);
             return dataAccess.Execute("stp_proveedores_delete", parametros);
         }
         public List<Proveedor> GetAll()
@@ -54,7 +54,6 @@ namespace SimSoft.BML
             parametros.Add("@idProveedor", idProveedor);
             parametros.Add("@nombre", nombre);
             parametros.Add("@telefono", telefono);
-            parametros.Add("@activo", activo);
             return dataAccess.Execute("stp_proveedores_update", parametros);
 
         }

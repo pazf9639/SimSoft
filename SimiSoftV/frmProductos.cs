@@ -21,7 +21,7 @@ namespace SimiSoftV
         {
             InitializeComponent();
         }
-      
+
         private void frmProductos_Load(object sender, EventArgs e)
         {
             productoBindingSource.DataSource = new Producto().GetAll();
@@ -32,7 +32,7 @@ namespace SimiSoftV
         {
             new frmNMProducto()
             {
-                Text="Nuevo producto"
+                Text = "Nuevo producto"
             }.ShowDialog();
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();
@@ -42,7 +42,7 @@ namespace SimiSoftV
         {
             new frmNMProducto((int)gvProductos.GetFocusedRowCellValue("idProducto"))
             {
-                Text = "Modificar producto("+ (int)gvProductos.GetFocusedRowCellValue("idProducto")+")"
+                Text = "Modificar producto(" + (int)gvProductos.GetFocusedRowCellValue("idProducto") + ")"
             }.ShowDialog();
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();
@@ -58,6 +58,6 @@ namespace SimiSoftV
             gvProductos.BestFitColumns();
         }
 
-       
+
     }
 }

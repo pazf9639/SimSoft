@@ -8,7 +8,7 @@ using SimSift.DAL;
 
 namespace SimSoft.BML
 {
-    class Cliente
+   public class Cliente
     {
         private DataAccess dataAccess = DataAccess.Instance();
         public int idCliente { get; set; }

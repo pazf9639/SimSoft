@@ -38,5 +38,22 @@ namespace SimiSoftV
             SplashScreenManager.CloseDefaultWaitForm();
 
         }
+
+        private void bbiProveedores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmProveedores))
+                {
+                    form.Activate();
+                    return;
+                }
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "cargando tabla de proveedores ...");
+            new frmProveedores() { MdiParent = this }.Show();
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
     }
 }

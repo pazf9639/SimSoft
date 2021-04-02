@@ -124,6 +124,7 @@ namespace SimiSoftV
             this.bbiProveedores.Caption = "Proveedores";
             this.bbiProveedores.Id = 9;
             this.bbiProveedores.Name = "bbiProveedores";
+            this.bbiProveedores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiProveedores_ItemClick);
             // 
             // bar3
             // 
